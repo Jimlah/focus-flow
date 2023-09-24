@@ -4,8 +4,200 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15fd4345ff192c72e5aeb95e94e19e8b",
+    "content-hash": "7d4045e3818fb9dbf1a82308e1478259",
     "packages": [
+        {
+            "name": "archtechx/enums",
+            "version": "v0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/archtechx/enums.git",
+                "reference": "475f45e682b0771253707f9403b704759a08da5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/archtechx/enums/zipball/475f45e682b0771253707f9403b704759a08da5f",
+                "reference": "475f45e682b0771253707f9403b704759a08da5f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "nunomaduro/larastan": "^1.0|^2.4",
+                "orchestra/testbench": "^6.9|^7.0|^8.0",
+                "pestphp/pest": "^1.2|^2.0",
+                "pestphp/pest-plugin-laravel": "^1.0|^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ArchTech\\Enums\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Štancl",
+                    "email": "samuel@archte.ch"
+                }
+            ],
+            "description": "Helpers for making PHP enums more lovable.",
+            "support": {
+                "issues": "https://github.com/archtechx/enums/issues",
+                "source": "https://github.com/archtechx/enums/tree/v0.3.2"
+            },
+            "time": "2023-02-15T13:05:41+00:00"
+        },
+        {
+            "name": "blade-ui-kit/blade-heroicons",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blade-ui-kit/blade-heroicons.git",
+                "reference": "f756c807b0d04afd2caf7079bac26492da9cc6d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blade-ui-kit/blade-heroicons/zipball/f756c807b0d04afd2caf7079bac26492da9cc6d4",
+                "reference": "f756c807b0d04afd2caf7079bac26492da9cc6d4",
+                "shasum": ""
+            },
+            "require": {
+                "blade-ui-kit/blade-icons": "^1.1",
+                "illuminate/support": "^9.0|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0|^8.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BladeUI\\Heroicons\\BladeHeroiconsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BladeUI\\Heroicons\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dries Vints",
+                    "homepage": "https://driesvints.com"
+                }
+            ],
+            "description": "A package to easily make use of Heroicons in your Laravel Blade views.",
+            "homepage": "https://github.com/blade-ui-kit/blade-heroicons",
+            "keywords": [
+                "Heroicons",
+                "blade",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/blade-ui-kit/blade-heroicons/issues",
+                "source": "https://github.com/blade-ui-kit/blade-heroicons/tree/2.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/caneco",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/driesvints",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-01-11T08:38:22+00:00"
+        },
+        {
+            "name": "blade-ui-kit/blade-icons",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blade-ui-kit/blade-icons.git",
+                "reference": "4d6b6b2548b1994a777211a985e18691701891e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blade-ui-kit/blade-icons/zipball/4d6b6b2548b1994a777211a985e18691701891e4",
+                "reference": "4d6b6b2548b1994a777211a985e18691701891e4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.0|^9.0|^10.0",
+                "illuminate/filesystem": "^8.0|^9.0|^10.0",
+                "illuminate/support": "^8.0|^9.0|^10.0",
+                "illuminate/view": "^8.0|^9.0|^10.0",
+                "php": "^7.4|^8.0",
+                "symfony/console": "^5.3|^6.0",
+                "symfony/finder": "^5.3|^6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3",
+                "orchestra/testbench": "^6.0|^7.0|^8.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "bin": [
+                "bin/blade-icons-generate"
+            ],
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BladeUI\\Icons\\BladeIconsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "BladeUI\\Icons\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dries Vints",
+                    "homepage": "https://driesvints.com"
+                }
+            ],
+            "description": "A package to easily make use of icons in your Laravel Blade views.",
+            "homepage": "https://github.com/blade-ui-kit/blade-icons",
+            "keywords": [
+                "blade",
+                "icons",
+                "laravel",
+                "svg"
+            ],
+            "support": {
+                "issues": "https://github.com/blade-ui-kit/blade-icons/issues",
+                "source": "https://github.com/blade-ui-kit/blade-icons"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/driesvints",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-06-09T15:47:26+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -1880,6 +2072,78 @@
                 }
             ],
             "time": "2023-09-16T11:51:32+00:00"
+        },
+        {
+            "name": "livewire/volt",
+            "version": "v1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/livewire/volt.git",
+                "reference": "f603231902a8695b4d32fb8bbdfec6b6e0b4b2f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/f603231902a8695b4d32fb8bbdfec6b6e0b4b2f4",
+                "reference": "f603231902a8695b4d32fb8bbdfec6b6e0b4b2f4",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^10.17|^11.0",
+                "livewire/livewire": "^3.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/folio": "^1.1",
+                "mockery/mockery": "^1.6",
+                "orchestra/testbench": "^8.6.2",
+                "pestphp/pest": "^2.9.5",
+                "phpstan/phpstan": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Livewire\\Volt\\VoltServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Livewire\\Volt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Nuno Maduro",
+                    "email": "nuno@laravel.com"
+                }
+            ],
+            "description": "An elegantly crafted functional API for Laravel Livewire.",
+            "homepage": "https://github.com/livewire/volt",
+            "keywords": [
+                "laravel",
+                "livewire",
+                "volt"
+            ],
+            "support": {
+                "issues": "https://github.com/livewire/volt/issues",
+                "source": "https://github.com/livewire/volt"
+            },
+            "time": "2023-09-19T14:43:54+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5948,6 +6212,82 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wendelladriel/laravel-lift",
+            "version": "v0.11.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WendellAdriel/laravel-lift.git",
+                "reference": "ee2005716b620adec5daa9c2a3c872975415dcdc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WendellAdriel/laravel-lift/zipball/ee2005716b620adec5daa9c2a3c872975415dcdc",
+                "reference": "ee2005716b620adec5daa9c2a3c872975415dcdc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0|^10.0",
+                "illuminate/support": "^9.0|^10.0",
+                "illuminate/validation": "^9.0|^10.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.11",
+                "nunomaduro/larastan": "^2.0",
+                "orchestra/testbench": "^8.9",
+                "pestphp/pest": "^2.15",
+                "pestphp/pest-plugin-faker": "^2.0",
+                "phpstan/phpstan": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "WendellAdriel\\Lift\\Providers\\LiftServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WendellAdriel\\Lift\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wendell Adriel",
+                    "email": "wendelladriel.ti@gmail.com"
+                }
+            ],
+            "description": "Take your Eloquent Models to the next level",
+            "keywords": [
+                "attributes",
+                "casts",
+                "eloquent",
+                "laravel",
+                "model",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/WendellAdriel/laravel-lift/issues",
+                "source": "https://github.com/WendellAdriel/laravel-lift"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/wendelladriel",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/WendellAdriel",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-09-22T09:14:50+00:00"
         }
     ],
     "packages-dev": [
