@@ -13,10 +13,8 @@
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased">
-        <div class="flex items-center justify-center w-full h-screen px-10">
-            @php($todo = \App\Models\Todo::query()->firstOrCreate([]))
-            <livewire:todo :$todo />
-        </div>
+    <body class="antialiased" x-data>
+        <livewire:task />
+        @livewireScriptConfig
     </body>
 </html>

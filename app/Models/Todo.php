@@ -29,4 +29,8 @@ class Todo extends Model
     #[Cast(TodoStatus::class)]
     #[Fillable]
     public TodoStatus $status;
+
+    #[Cast('int')]
+    #[Fillable]
+    public int $order;
 }
