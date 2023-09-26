@@ -17,7 +17,7 @@ $edit = function(){
 };
 ?>
 
-<div class="w-full max-w-xs mx-auto bg-white border p-2 rounded text-gray-800 flex items-center justify-between space-x-2" wire:sortable.item="{{ $todo->id }}">
+<div class="w-full max-w-xs mx-auto bg-white data-[overing=true]:bg-yellow-100 data-[dragging=true]:shadow-md border p-2 rounded text-gray-800 flex items-center justify-between space-x-2" x-sortable:item="{{ $todo->id }}">
     <div class="flex items-center justify-between w-full">
         @if($isEdit)
             <label class="w-full max-w-xs flex items-center justify-start">
@@ -45,7 +45,7 @@ $edit = function(){
             </div>
         </div>
     </div>
-    <button wire:sortable.handle>
+    <button x-sortable:handle>
         <x-heroicon-o-arrows-up-down class="w-4 h-4" />
     </button>
 </div>
