@@ -41,6 +41,10 @@ const handleRoot = (el, Alpine) => {
             return {
                 __items: [],
             }
+        },
+        '@sortable:item:stop'(){
+            const items = this.$data.__items.map(item => item.getAttribute('wire:sortable.item'));
+            this.$dispatch('sortable:stop', items);
         }
     })
 }
@@ -52,12 +56,15 @@ const handleItem = (el, Alpine) => {
                 __handle: null,
                 __dragging: false,
                 __overing: false,
+                __draggable: true,
                 init(){
                     this.$data.__items.push(this.$el);
                 },
             }
         },
-        ':draggable': 'true',
+        ':draggable'(){
+            return this.$data.__draggable;
+        },
         ':data-dragging'(){
             return this.$data.__dragging;
         },
@@ -72,6 +79,8 @@ const handleItem = (el, Alpine) => {
             this.$el.after(element)
             this.$data.__overing = false;
             this.$data.__dragging = false;
+            this.$data.__draggable = false;
+            this.$dispatch('sortable:item:stop');
         },
         '@dragenter.prevent'(){
             this.$data.__overing = true;
@@ -84,6 +93,7 @@ const handleItem = (el, Alpine) => {
         },
         '@dragend'(){
             this.$data.__dragging = false;
+            this.$data.__draggable = false;
         }
 
     })
@@ -95,8 +105,15 @@ const handleHandler = (el, Alpine) => {
             return {
                 init(){
                     this.$data.__handle = this.$el;
+                    this.$data.__draggable = false;
                 }
             }
+        },
+        ['@mousedown.stop'](){
+            this.$data.__draggable = true;
+        },
+        ['@mouseup.stop'](){
+            this.$data.__draggable = false;
         }
     })
 }

@@ -11,7 +11,13 @@ $add = function () {
     Todo::query()->create(['description' => $this->description]);
     $this->description = '';
 };
-$updateOrder = action(fn($items) => collect($items)->each(fn($item) => Todo::query()->find($item['value'])->update(['order' => $item['order']])))->renderless();
+$updateOrder = action(fn($items) =>
+collect($items)
+    ->each(fn($item)
+    => Todo::query()
+        ->find($item['value'])
+        ->update(['order' => $item['order']])))
+    ->renderless();
 ?>
 
 <div x-data class="flex items-center justify-center space-y-4 flex-col w-full h-screen px-10">
@@ -26,7 +32,7 @@ $updateOrder = action(fn($items) => collect($items)->each(fn($item) => Todo::que
         <span class="text-xs text-red-500">@error('description'){{ $message }}@enderror</span>
     </div>
 
-    <div class="flex items-center justify-center space-y-4 flex-col w-full px-10" x-sortable="updateOrder">
+    <div class="flex items-center justify-center space-y-2 flex-col w-full px-10" wire:sortable="updateOrder">
         @foreach($this->todos as $todo)
             <livewire:todo :$todo :key="$todo->id"/>
         @endforeach
