@@ -76,7 +76,9 @@ const handleItem = (el, Alpine) => {
         },
         '@drop'(){
             const element = this.$data.__items.find(item => Alpine.$data(item).__dragging);
-            this.$el.after(element)
+            this.$el.compareDocumentPosition(element) === 4
+                ? this.$el.before(element)
+                : this.$el.after(element);
             this.$data.__overing = false;
             this.$data.__dragging = false;
             this.$data.__draggable = false;
