@@ -23,7 +23,7 @@ collect($items)
 <div x-data class="flex items-center justify-center space-y-4 flex-col w-full h-screen px-10">
     <div class="w-full max-w-xs ">
         <label class="w-full max-w-xs flex items-center justify-start border p-2 rounded-md">
-            <input class="w-full h-full text-sm focus:outline-none" wire:model="description"
+            <input class="w-full h-full text-sm focus:outline-none" wire:model="description" wire:keydown.enter="add"
                    placeholder="Enter your Todo">
             <button class="focus:outline-none" wire:click="add">
                 <x-heroicon-o-plus class="w-5 aspect-square"/>

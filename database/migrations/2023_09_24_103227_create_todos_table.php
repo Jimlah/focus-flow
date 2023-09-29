@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\Period;
 use App\Enums\TodoStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,6 +18,8 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('status')->default(TodoStatus::PENDING);
             $table->integer('order')->default(0);
+            $table->float('quantity')->default(5);
+            $table->string('period')->default(Period::SECONDS);
             $table->timestamps();
         });
     }

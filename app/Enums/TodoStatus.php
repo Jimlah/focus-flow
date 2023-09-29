@@ -21,21 +21,26 @@ enum TodoStatus: int
 
     #[Description('Pending')]
     #[SVG('heroicon-o-play')]
+    #[Color('gray')]
     case PENDING = 0;
 
     #[Description('On going')]
     #[SVG('heroicon-o-play')]
+    #[Color('green')]
     case ON_GOING = 1;
 
     #[Description('Done')]
     #[SVG('heroicon-o-check')]
+    #[Color('blue')]
     case DONE = 2;
 
     #[Description('Canceled')]
     #[SVG('heroicon-o-x-mark')]
+    #[Color('red')]
     case CANCELLED = 3;
 
     #[Description('Hold')]
     #[SVG('heroicon-o-pause')]
+    #[Color('yellow')]
     case HOLD = 4;
 }

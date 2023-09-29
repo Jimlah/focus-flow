@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//\Livewire\Volt\Volt::route('', 'tododetail')->name('todo.index');
+\Livewire\Volt\Volt::route('todos/{todo}', 'tododetail')->name('todo.show');

@@ -1,5 +1,6 @@
 import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm';
 import Sortable from "./sortable.js";
+import './bootstrap.js';
 
 Alpine.plugin(Sortable);
 
